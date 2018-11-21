@@ -1,0 +1,15 @@
+#
+# Davicom device configuration
+#
+
+config DM9051
+	tristate "DM9051 support"
+	depends on ARM || BLACKFIN || MIPS || COLDFIRE
+	select CRC32
+	select NET_CORE
+	select MII
+	---help---
+	  Support for DM9051 chipset.
+
+	  To compile this driver as a module, choose M here.  The module
+	  will be called dm9051.
